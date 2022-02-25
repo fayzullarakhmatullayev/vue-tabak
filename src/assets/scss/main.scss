@@ -1,0 +1,152 @@
+@import "../fonts/stylesheet.css";
+@import "../styles/normilize.css";
+
+.back {
+  width: 70px;
+  &-inner {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    svg {
+      display: block;
+      margin-right: 0.5rem;
+    }
+  }
+}
+.bought {
+  font-size: 1rem;
+  font-weight: 700;
+
+  span {
+    margin-left: 0.5rem;
+    font-size: 12px;
+    line-height: 11px;
+    font-weight: 400;
+    color: rgba(141, 142, 144, 0.6);
+  }
+}
+.comparing {
+  .card {
+    &-slider {
+      display: flex;
+      overflow-y: hidden;
+    }
+    width: 115px;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+    margin-bottom: 13px;
+    &-img {
+      width: 115px;
+      background: #1c1c1c;
+      padding: 8px 25px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      position: relative;
+      img {
+        height: 67px;
+      }
+    }
+    &-delete {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+    &-price {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 11px;
+      margin-bottom: 5px;
+    }
+    &-name {
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 10px;
+      margin-bottom: 10px;
+    }
+    .btn {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 11px;
+      padding: 5px 10px 4px;
+      &-wrapper {
+        width: 83px;
+      }
+      &-sm {
+        width: 24px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+      }
+    }
+  }
+  .content {
+    &-title {
+      margin-bottom: 10px;
+    }
+    &-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      padding: 4px 0;
+      span {
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 11px;
+        margin-right: 5px;
+      }
+
+      .info {
+        &-wrapper {
+          position: relative;
+        }
+        position: absolute;
+        top: 3px;
+        left: 27px;
+        width: 150px;
+        background: #636667;
+        min-height: 84px;
+        font-weight: normal;
+        font-size: 9px;
+        line-height: 9px;
+        padding: 16px 3px;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-top: 15px solid #636667;
+          border-right: 15px solid transparent;
+          top: 0;
+          left: -14px;
+          transform: rotate(-270deg);
+        }
+        img {
+          width: 7px;
+          position: absolute;
+          top: 5px;
+          right: 5px;
+        }
+      }
+    }
+    &-compare {
+      background: #1c1c1c;
+      padding: 4px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      &_info {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 13px;
+      }
+      .blue {
+        color: #5181b8;
+      }
+    }
+  }
+}
