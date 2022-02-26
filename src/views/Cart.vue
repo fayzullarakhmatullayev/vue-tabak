@@ -206,8 +206,5 @@ export default {
       ],
     };
   },
-  mounted() {
-    this.$store.state.isBackOpen = true;
-  },
 };
 </script>

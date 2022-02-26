@@ -8,7 +8,9 @@
       </div>
       <div class="card-slider">
         <div class="card" v-for="product in products" :key="product.id">
-          <div class="card-img">
+          <div
+            class="card-img bg-black-300 dark:bg-black-900 dark:border-black-700 dark:text-black-700"
+          >
             <img :src="product.image" :alt="product.name" />
             <svg
               class="card-delete"
@@ -81,7 +83,9 @@
             </div>
           </div>
         </div>
-        <div class="content-compare">
+        <div
+          class="content-compare bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        >
           <div class="content-compare_info">Сильная</div>
           <div class="content-compare_info">Сильная</div>
           <div class="content-compare_info">Сильная</div>
@@ -104,7 +108,9 @@
             </div>
           </div>
         </div>
-        <div class="content-compare">
+        <div
+          class="content-compare bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        >
           <div class="content-compare_info">Oden’s</div>
           <div class="content-compare_info">Oden’s</div>
           <div class="content-compare_info">Oden’s</div>
@@ -127,7 +133,9 @@
             </div>
           </div>
         </div>
-        <div class="content-compare">
+        <div
+          class="content-compare bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        >
           <div class="content-compare_info">22 м/г</div>
           <div class="content-compare_info">22 м/г</div>
           <div class="content-compare_info">22 м/г</div>
@@ -150,7 +158,9 @@
             </div>
           </div>
         </div>
-        <div class="content-compare">
+        <div
+          class="content-compare bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        >
           <div class="content-compare_info blue">13-15 шт</div>
           <div class="content-compare_info">10-13 шт</div>
           <div class="content-compare_info blue">13-15 шт</div>
@@ -173,7 +183,9 @@
             </div>
           </div>
         </div>
-        <div class="content-compare">
+        <div
+          class="content-compare bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        >
           <div class="content-compare_info">13-15 шт</div>
           <div class="content-compare_info">13-15 шт</div>
           <div class="content-compare_info">13-15 шт</div>
@@ -196,7 +208,9 @@
             </div>
           </div>
         </div>
-        <div class="content-compare">
+        <div
+          class="content-compare bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        >
           <div class="content-compare_info">13-15 шт</div>
           <div class="content-compare_info">13-15 шт</div>
           <div class="content-compare_info">13-15 шт</div>
@@ -219,7 +233,9 @@
             </div>
           </div>
         </div>
-        <div class="content-compare">
+        <div
+          class="content-compare bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        >
           <div class="content-compare_info">Табачный</div>
           <div class="content-compare_info">Табачный</div>
           <div class="content-compare_info">Табачный</div>
@@ -242,7 +258,9 @@
             </div>
           </div>
         </div>
-        <div class="content-compare">
+        <div
+          class="content-compare bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        >
           <div class="content-compare_info">Мята</div>
           <div class="content-compare_info">Мята</div>
           <div class="content-compare_info">Мята</div>

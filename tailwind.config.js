@@ -1,9 +1,9 @@
 module.exports = {
   content: ["./src/**/*.vue"],
+  darkMode: "class",
   theme: {
     screens: {
       sm: { max: "640px" },
-      // => @media (max-width: 640px) { ... }
     },
     extend: {
       fontFamily: {
