@@ -43,6 +43,7 @@
         </button>
         <button
           class="bg-black-800 flex items-center justify-center rounded-lg py-1"
+          @click="showSort = true"
         >
           <span class="text-white">Сортировать</span>
           <svg
@@ -175,13 +176,19 @@
       </div>
     </div>
   </div>
+  <teleport to="body">
+    <sort-items :showSort="showSort" @makeFalse="showSort = false" />
+  </teleport>
 </template>
 
 <script>
+import SortItems from "@/components/SortItems.vue";
 export default {
+  components: { SortItems },
   name: "Catalog",
   data() {
     return {
+      showSort: false,
       products: [
         {
           id: 1,
