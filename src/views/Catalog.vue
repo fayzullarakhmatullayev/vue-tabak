@@ -39,7 +39,7 @@
               d="M18.3335 0.333374L17.0835 1.58337L16.6668 2.00004L11.6668 7.00004V14.5L7.50017 13.25L7.50016 7.00004L2.91683 2.41671L2.50017 2.00004L0.833496 0.333374H18.3335Z"
             />
           </svg>
-          <span class="text-white">Фильтр</span>
+          <span class="text-white" @click="isFilterOpen = true">Фильтр</span>
         </button>
         <button
           class="bg-black-800 flex items-center justify-center rounded-lg py-1"
@@ -176,19 +176,23 @@
       </div>
     </div>
   </div>
+
   <teleport to="body">
     <sort-items :showSort="showSort" @makeFalse="showSort = false" />
+    <filter-items v-if="isFilterOpen" @closeFilter="isFilterOpen = false" />
   </teleport>
 </template>
 
 <script>
 import SortItems from "@/components/SortItems.vue";
+import FilterItems from "@/components/FilterItems.vue";
 export default {
-  components: { SortItems },
+  components: { SortItems, FilterItems },
   name: "Catalog",
   data() {
     return {
       showSort: false,
+      isFilterOpen: false,
       products: [
         {
           id: 1,
@@ -246,9 +250,6 @@ export default {
         },
       ],
     };
-  },
-  mounted() {
-    this.$store.state.isBackOpen = true;
   },
 };
 </script>

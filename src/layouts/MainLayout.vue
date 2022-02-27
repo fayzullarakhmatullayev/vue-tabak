@@ -1,6 +1,6 @@
 <template>
   <div class="dark:bg-black-900 dark:text-black-200 container">
-    <Navbar />
+    <Navbar :isBackOpen="isBackOpen" />
     <div class="dark:bg-black-900 min-h-screen">
       <router-view></router-view>
     </div>
@@ -17,6 +17,15 @@ export default {
   components: {
     Navbar,
     Menu,
+  },
+  computed: {
+    isBackOpen() {
+      if (this.$route.path === "/catalog") {
+        return (this.$store.state.isBackOpen = false);
+      } else {
+        return (this.$store.state.isBackOpen = true);
+      }
+    },
   },
 };
 </script>

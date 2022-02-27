@@ -2,11 +2,7 @@
   <div class="dark:bg-black-900 fixed top-0 z-50 w-[calc(100%-1rem)] bg-white">
     <div class="relative flex h-16 items-center justify-between">
       <div class="back">
-        <div
-          class="back-inner"
-          @click="$router.go(-1)"
-          v-if="$store.state.isBackOpen"
-        >
+        <div class="back-inner" @click="$router.go(-1)" v-if="isBackOpen">
           <img
             src="../assets/img/icons/arrow-left.svg"
             alt="arrow-left"
@@ -84,6 +80,7 @@
 <script>
 export default {
   name: "Navbar",
+  props: ["isBackOpen"],
   computed: {
     isDarkTheme() {
       if (document.querySelector("html").classList.contains("dark")) {
