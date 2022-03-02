@@ -129,6 +129,38 @@ const routes = [
       layout: "main",
     },
   },
+  {
+    path: "/notification",
+    name: "Notification",
+    component: () => import("../views/Notification"),
+    meta: {
+      layout: "main",
+    },
+  },
+  {
+    path: "/notification-settings",
+    name: "NotificationSettings",
+    component: () => import("../views/NotificationSettings"),
+    meta: {
+      layout: "main",
+    },
+  },
+  {
+    path: "/report",
+    name: "Report",
+    component: () => import("../views/Report"),
+    meta: {
+      layout: "main",
+    },
+  },
+  {
+    path: "/report-graph",
+    name: "ReportGraph",
+    component: () => import("../views/ReportGraph"),
+    meta: {
+      layout: "main",
+    },
+  },
 ];
 
 const router = createRouter({

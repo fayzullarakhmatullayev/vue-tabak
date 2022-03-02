@@ -162,6 +162,7 @@
         <ul class="flex flex-col">
           <li
             class="dark:bg-black-800 mb-0.5 flex items-center justify-between bg-[#F4F4F4] p-1"
+            @click="$router.push('/notification')"
           >
             <span>Уведомления</span>
             <svg
@@ -179,6 +180,7 @@
           </li>
           <li
             class="dark:bg-black-800 mb-0.5 flex items-center justify-between bg-[#F4F4F4] p-1"
+            @click="$router.push('/notification-settings')"
           >
             <span>Настройка уведомлений</span>
             <svg

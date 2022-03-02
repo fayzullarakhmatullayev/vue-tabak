@@ -8,9 +8,12 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.4.0",
+    "apexcharts": "^3.33.2",
     "axios": "^0.25.0",
+    "chart.js": "^2.9.4",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
+    "vue-chartjs": "^3.5.1",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },

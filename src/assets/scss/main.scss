@@ -1,6 +1,15 @@
 @import "../fonts/stylesheet.css";
 @import "../styles/normilize.css";
-
+input,
+button,
+select,
+textarea {
+  font-family: "Gotham Pro", sans-serif;
+}
+input::placeholder,
+textarea::placeholder {
+  font-family: "Gotham Pro", sans-serif;
+}
 .back {
   width: 70px;
   &-inner {
@@ -558,5 +567,151 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 15px;
+  }
+}
+.notification {
+  &-title {
+    font-size: 1rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+  &-item {
+    padding: 10px 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1;
+  }
+  &-heading {
+    margin-bottom: 5px;
+  }
+  &-text {
+    margin-bottom: 20px;
+  }
+  &-subtitle {
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  &-settings {
+    margin-bottom: 10px;
+  }
+  .menu {
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 5px;
+      margin-bottom: 2px;
+    }
+    &-title {
+      margin-bottom: 5px;
+    }
+    &-subtitle {
+      font-size: 14px;
+      line-height: 1;
+    }
+    &-array {
+      display: block;
+      transform: rotate(90deg);
+    }
+  }
+}
+.report {
+  &-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 17px;
+    margin-bottom: 20px;
+  }
+  input[type="date"]::-webkit-inner-spin-button,
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  &-card {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  &-img {
+    height: 67px;
+    width: auto;
+    display: block;
+    margin-right: 12px;
+  }
+  &-name {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+    margin-bottom: 5px;
+  }
+  &-blog {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    &__name {
+      width: 60px;
+      margin-right: 10px;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 11px;
+    }
+    &__count {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 11px;
+    }
+  }
+  &-price {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+  }
+}
+.graph {
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 17px;
+    margin-bottom: 10px;
+  }
+  &-filter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    input {
+      width: 83px;
+      height: 30px;
+      font-size: 13px;
+    }
+    button {
+      height: 30px;
+      width: 93px;
+      font-size: 13px;
+    }
+  }
+  &-info {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    grid-template-columns: repeat(2, 49%);
+  }
+  &-card {
+    padding: 13px 10px;
+    border-radius: 5px;
+    &__title {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 15px;
+      margin-bottom: 5px;
+    }
+    &__text {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 11px;
+    }
+    &__link {
+      color: #5181b8;
+    }
   }
 }

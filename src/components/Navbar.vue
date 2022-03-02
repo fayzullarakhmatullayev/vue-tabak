@@ -18,8 +18,8 @@
       </div>
       <img src="../assets/img/icons/logo.svg" alt="logo" v-if="isDarkTheme" />
       <img src="../assets/img/icons/logo-black.svg" alt="logo-black" v-else />
-      <div class="flex items-center">
-        <div class="relative mr-3">
+      <div class="flex items-center" v-if="isNotification">
+        <div class="relative mr-3" @click="$router.push('/report')">
           <span
             class="bg-blueish absolute -top-2 -right-1.5 rounded-full px-1.5 text-xs font-semibold leading-5 text-white"
           >
@@ -46,7 +46,7 @@
             />
           </svg>
         </div>
-        <div class="relative mr-3">
+        <div class="relative mr-3" @click="$router.push('/notification')">
           <span
             class="absolute -top-2 -right-1.5 rounded-full bg-red-500 px-1.5 text-xs font-semibold leading-5 text-white"
           >
@@ -73,6 +73,7 @@
           </svg>
         </div>
       </div>
+      <div v-else style="width: 50px"></div>
     </div>
   </div>
 </template>
@@ -80,7 +81,7 @@
 <script>
 export default {
   name: "Navbar",
-  props: ["isBackOpen"],
+  props: ["isBackOpen", "isNotification"],
   computed: {
     isDarkTheme() {
       if (document.querySelector("html").classList.contains("dark")) {
