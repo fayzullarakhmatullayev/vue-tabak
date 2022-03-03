@@ -188,6 +188,22 @@ const routes = [
       layout: "admin",
     },
   },
+  {
+    path: "/logs",
+    name: "Logs",
+    component: () => import("../views/Admin/Logs"),
+    meta: {
+      layout: "admin",
+    },
+  },
+  {
+    path: "/admin-profile",
+    name: "AdminProfile",
+    component: () => import("../views/Admin/AdminProfile"),
+    meta: {
+      layout: "admin",
+    },
+  },
 ];
 
 const router = createRouter({

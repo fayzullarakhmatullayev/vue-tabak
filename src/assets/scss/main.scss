@@ -1006,6 +1006,130 @@ textarea::placeholder {
   }
 }
 
+.logs {
+  &-title {
+    display: flex;
+    align-items: center;
+    svg {
+      transform: rotate(180deg);
+      margin-left: 10px;
+    }
+  }
+  &-search {
+    margin-bottom: 20px;
+    input {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 11px;
+    }
+  }
+  &-item {
+    margin-bottom: 10px;
+    &__title {
+      text-align: center;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 13px;
+      margin-bottom: 10px;
+    }
+  }
+  &-card {
+    padding: 10px 10px 10px 12px;
+    border-left: 2px solid transparent;
+    &.green {
+      border-color: #21b140;
+    }
+    &.red {
+      border-color: #ef2525;
+    }
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    &__price,
+    &__title {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 13px;
+    }
+    &__text {
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 10px;
+      margin-bottom: 5px;
+    }
+    &__link {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 13px;
+      color: #0088cc;
+    }
+  }
+}
+.admin-exit {
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 5px;
+  }
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 13px;
+  }
+}
+.profile {
+  &-content {
+    padding-top: 4.5rem;
+  }
+  &-title {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 13px;
+    margin-bottom: 10px;
+  }
+  &-wrapper {
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(141, 142, 144, 0.6);
+      padding-bottom: 20px;
+    }
+    &:not(:first-child) {
+      padding-top: 10px;
+    }
+  }
+  &-list {
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 30px;
+    padding: 5px;
+    p {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 13px;
+    }
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      background: rgba(141, 142, 144, 0.6);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 13px;
+    }
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
 .dark {
   .menu-link {
     &.router-link-active,
