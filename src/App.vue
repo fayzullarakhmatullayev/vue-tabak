@@ -3,15 +3,16 @@
 </template>
 
 <script>
-import EmptyLayout from "./layouts/EmptyLayout.vue";
-import MainLayout from "./layouts/MainLayout.vue";
+import AuthLayout from "@/layouts/AuthLayout.vue";
+import ClientLayout from "@/layouts/ClientLayout.vue";
+import AdminLayout from "@/layouts/AdminLayout.vue";
 export default {
   computed: {
     layout() {
       return (this.$route.meta.layout || "empty") + "-layout";
     },
   },
-  components: { EmptyLayout, MainLayout },
+  components: { AuthLayout, ClientLayout, AdminLayout },
   created() {
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (

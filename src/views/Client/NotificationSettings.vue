@@ -21,7 +21,7 @@
         <img
           class="menu-array"
           v-else
-          src="../assets/img/icons/arrow-top-black.svg"
+          src="@/assets/img/icons/arrow-top-black.svg"
           alt="arrow-right"
         />
       </li>
@@ -39,7 +39,7 @@
         <img
           class="menu-array"
           v-else
-          src="../assets/img/icons/arrow-top-black.svg"
+          src="@/assets/img/icons/arrow-top-black.svg"
           alt="arrow-right"
         />
       </li>
@@ -59,7 +59,7 @@
         <img
           class="menu-array"
           v-else
-          src="../assets/img/icons/arrow-top-black.svg"
+          src="@/assets/img/icons/arrow-top-black.svg"
           alt="arrow-right"
         />
       </li>

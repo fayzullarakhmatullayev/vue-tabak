@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
-import Menu from "../components/Menu.vue";
+import Navbar from "@/components/Client/Navbar.vue";
+import Menu from "@/components/Client/Menu.vue";
 
 export default {
   name: "App",

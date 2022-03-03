@@ -4,20 +4,20 @@
       <div class="back">
         <div class="back-inner" @click="$router.go(-1)" v-if="isBackOpen">
           <img
-            src="../assets/img/icons/arrow-left.svg"
+            src="@/assets/img/icons/arrow-left.svg"
             alt="arrow-left"
             v-if="isDarkTheme"
           />
           <img
-            src="../assets/img/icons/arrow-left-black.svg"
+            src="@/assets/img/icons/arrow-left-black.svg"
             alt="arrow-left-black"
             v-else
           />
           <span>Назад</span>
         </div>
       </div>
-      <img src="../assets/img/icons/logo.svg" alt="logo" v-if="isDarkTheme" />
-      <img src="../assets/img/icons/logo-black.svg" alt="logo-black" v-else />
+      <img src="@/assets/img/icons/logo.svg" alt="logo" v-if="isDarkTheme" />
+      <img src="@/assets/img/icons/logo-black.svg" alt="logo-black" v-else />
       <div class="flex items-center" v-if="isNotification">
         <div class="relative mr-3" @click="$router.push('/report')">
           <span

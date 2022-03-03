@@ -67,7 +67,7 @@
 </template>
 
 <script>
-import ReportFilter from "@/components/ReportFilter.vue";
+import ReportFilter from "@/components/Client/ReportFilter.vue";
 export default {
   components: { ReportFilter },
   data() {
@@ -78,7 +78,7 @@ export default {
           id: 1,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 6,
           boxes: 0,
@@ -87,7 +87,7 @@ export default {
           id: 2,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 0,
           boxes: 4,
@@ -96,7 +96,7 @@ export default {
           id: 3,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 0,
           boxes: 5,
@@ -105,7 +105,7 @@ export default {
           id: 4,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 5,
           boxes: 0,
@@ -114,7 +114,7 @@ export default {
           id: 5,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 4,
           boxes: 0,
@@ -123,7 +123,7 @@ export default {
           id: 6,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 0,
           boxes: 6,

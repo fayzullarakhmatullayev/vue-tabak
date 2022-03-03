@@ -28,12 +28,12 @@
           >
             <span>Производитель</span>
             <img
-              src="../assets/img/icons/arrow-top.svg"
+              src="@/assets/img/icons/arrow-top.svg"
               alt="arrow-top"
               v-if="isDarkTheme"
             />
             <img
-              src="../assets/img/icons/arrow-top-black.svg"
+              src="@/assets/img/icons/arrow-top-black.svg"
               alt="arrow-top-black"
               v-else
             />
@@ -153,12 +153,12 @@
           >
             <span>Количество</span>
             <img
-              src="../assets/img/icons/arrow-top.svg"
+              src="@/assets/img/icons/arrow-top.svg"
               alt="arrow-top"
               v-if="isDarkTheme"
             />
             <img
-              src="../assets/img/icons/arrow-top-black.svg"
+              src="@/assets/img/icons/arrow-top-black.svg"
               alt="arrow-top-black"
               v-else
             />

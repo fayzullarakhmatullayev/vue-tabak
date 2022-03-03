@@ -4,8 +4,8 @@
       class="dark:bg-black-900 sticky top-16 flex w-full flex-col border-b bg-white py-2"
     >
       <div class="mb-2">
-        <span class="text-lg font-medium bought"
-          >Купленные товары <span>{{ products.length }} товара</span></span
+        <span class="text-lg font-medium"
+          >Избранное ({{ products.length }})</span
         >
       </div>
       <div class="grid grid-cols-2 gap-2">
@@ -147,7 +147,7 @@
 
 <script>
 export default {
-  name: "CartItems",
+  name: "Favorite",
   data() {
     return {
       products: [
@@ -155,42 +155,61 @@ export default {
           id: 1,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
-          blocks: 2,
+          blocks: 0,
           boxes: 0,
         },
         {
           id: 2,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
-          blocks: 2,
+          blocks: 0,
           boxes: 0,
         },
         {
           id: 3,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
-          blocks: 2,
+          blocks: 0,
           boxes: 0,
         },
         {
           id: 4,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
-          blocks: 2,
+          blocks: 0,
+          boxes: 0,
+        },
+        {
+          id: 5,
+          name: "Жевательный табак Oden’s 10г",
+          status: "Доступно",
+          image: require("../../assets/img/products/1.png"),
+          price: 400,
+          blocks: 0,
+          boxes: 0,
+        },
+        {
+          id: 6,
+          name: "Жевательный табак Oden’s 10г",
+          status: "Доступно",
+          image: require("../../assets/img/products/1.png"),
+          price: 400,
+          blocks: 0,
           boxes: 0,
         },
       ],
     };
   },
+  mounted() {
+    this.$store.state.isBackOpen = true;
+  },
 };
 </script>
-
-<style></style>

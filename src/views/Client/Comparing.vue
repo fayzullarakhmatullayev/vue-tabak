@@ -13,13 +13,13 @@
           >
             <img :src="product.image" :alt="product.name" />
             <img
-              src="../assets/img/icons/close.svg"
+              src="@/assets/img/icons/close.svg"
               alt="close"
               v-if="isDarkTheme"
               class="card-delete"
             />
             <img
-              src="../assets/img/icons/close-black.svg"
+              src="@/assets/img/icons/close-black.svg"
               alt="close-black"
               class="card-delete"
               v-else
@@ -76,7 +76,7 @@
             />
             <div class="info" v-if="isInfoOpen1">
               <img
-                src="../assets/img/icons/close.svg"
+                src="@/assets/img/icons/close.svg"
                 alt="close"
                 @click="isInfoOpen1 = false"
               />
@@ -101,7 +101,7 @@
             />
             <div class="info" v-if="isInfoOpen2">
               <img
-                src="../assets/img/icons/close.svg"
+                src="@/assets/img/icons/close.svg"
                 alt="close"
                 @click="isInfoOpen2 = false"
               />
@@ -126,7 +126,7 @@
             />
             <div class="info" v-if="isInfoOpen3">
               <img
-                src="../assets/img/icons/close.svg"
+                src="@/assets/img/icons/close.svg"
                 alt="close"
                 @click="isInfoOpen3 = false"
               />
@@ -151,7 +151,7 @@
             />
             <div class="info" v-if="isInfoOpen4">
               <img
-                src="../assets/img/icons/close.svg"
+                src="@/assets/img/icons/close.svg"
                 alt="close"
                 @click="isInfoOpen4 = false"
               />
@@ -176,7 +176,7 @@
             />
             <div class="info" v-if="isInfoOpen5">
               <img
-                src="../assets/img/icons/close.svg"
+                src="@/assets/img/icons/close.svg"
                 alt="close"
                 @click="isInfoOpen5 = false"
               />
@@ -201,7 +201,7 @@
             />
             <div class="info" v-if="isInfoOpen6">
               <img
-                src="../assets/img/icons/close.svg"
+                src="@/assets/img/icons/close.svg"
                 alt="close"
                 @click="isInfoOpen6 = false"
               />
@@ -226,7 +226,7 @@
             />
             <div class="info" v-if="isInfoOpen7">
               <img
-                src="../assets/img/icons/close.svg"
+                src="@/assets/img/icons/close.svg"
                 alt="close"
                 @click="isInfoOpen7 = false"
               />
@@ -251,7 +251,7 @@
             />
             <div class="info" v-if="isInfoOpen8">
               <img
-                src="../assets/img/icons/close.svg"
+                src="@/assets/img/icons/close.svg"
                 alt="close"
                 @click="isInfoOpen8 = false"
               />
@@ -281,7 +281,7 @@ export default {
           id: 1,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 0,
           boxes: 0,
@@ -290,7 +290,7 @@ export default {
           id: 2,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 0,
           boxes: 0,
@@ -299,7 +299,7 @@ export default {
           id: 3,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 0,
           boxes: 0,
@@ -308,7 +308,7 @@ export default {
           id: 4,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 0,
           boxes: 0,

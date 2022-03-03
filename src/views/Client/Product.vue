@@ -60,14 +60,14 @@
         <div class="flex justify-between">
           <div class="dark:bg-black-800 bg-black-300 mr-2 w-1/3 rounded-lg p-2">
             <img
-              src="../assets/img/products/1.png"
+              src="@/assets/img/products/1.png"
               alt=""
               class="h-full w-full object-contain"
             />
           </div>
           <div class="dark:bg-black-800 bg-black-300 mr-2 w-1/3 rounded-lg p-2">
             <img
-              src="../assets/img/products/1.png"
+              src="@/assets/img/products/1.png"
               alt=""
               class="h-full w-full object-contain"
             />
@@ -76,7 +76,7 @@
             class="dark:bg-black-800 bg-black-300 mr-2 w-1/3 rounded-lg p-2 last:mr-0"
           >
             <img
-              src="../assets/img/products/1.png"
+              src="@/assets/img/products/1.png"
               alt=""
               class="h-full w-full object-contain"
             />
@@ -247,7 +247,7 @@ export default {
         id: 1,
         name: "Жевательный табак Oden’s 10г",
         status: "Доступно",
-        image: require("../assets/img/products/1.png"),
+        image: require("../../assets/img/products/1.png"),
         price: 400,
         boxes: 0,
         description:

@@ -47,9 +47,7 @@ export default {
   props: ["showSort"],
   emits: ["makeFalse"],
   methods: {
-    handleCheck(num) {
-      console.log(num);
-    },
+    handleCheck(num) {},
   },
 };
 </script>

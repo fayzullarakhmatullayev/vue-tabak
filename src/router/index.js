@@ -1,164 +1,191 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
+  // Authorization
   {
     path: "/",
     name: "EntryPage",
-    component: () => import("../views/EntryPage"),
+    component: () => import("../views/Auth/EntryPage"),
     meta: {
-      layout: "empty",
+      layout: "auth",
     },
   },
   {
     path: "/register",
     name: "Registration",
-    component: () => import("../views/Registration"),
+    component: () => import("../views/Auth/Registration"),
     meta: {
-      layout: "empty",
+      layout: "auth",
     },
   },
   {
     path: "/auth",
     name: "Auth",
-    component: () => import("../views/Auth"),
+    component: () => import("../views/Auth/Auth"),
     meta: {
-      layout: "empty",
+      layout: "auth",
     },
   },
   {
     path: "/forgot-password",
     name: "ForgotPassword",
-    component: () => import("../views/ForgotPassword"),
+    component: () => import("../views/Auth/ForgotPassword"),
     meta: {
-      layout: "empty",
+      layout: "auth",
     },
   },
   {
     path: "/new-password",
     name: "NewPassword",
-    component: () => import("../views/NewPassword"),
+    component: () => import("../views/Auth/NewPassword"),
     meta: {
-      layout: "empty",
+      layout: "auth",
     },
   },
+  // Client
   {
     path: "/catalog",
     name: "Catalog",
-    component: () => import("../views/Catalog"),
+    component: () => import("../views/Client/Catalog"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/product",
     name: "Product",
-    component: () => import("../views/Product"),
+    component: () => import("../views/Client/Product"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/cart",
     name: "Cart",
-    component: () => import("../views/Cart"),
+    component: () => import("../views/Client/Cart"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/checkout-preview",
     name: "CheckoutPreview",
-    component: () => import("../views/CheckoutPreview"),
+    component: () => import("../views/Client/CheckoutPreview"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/checkout",
     name: "Checkout",
-    component: () => import("../views/Checkout"),
+    component: () => import("../views/Client/Checkout"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/profile",
     name: "Profile",
-    component: () => import("../views/Profile"),
+    component: () => import("../views/Client/Profile"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/profile-edit",
     name: "ProfileEdit",
-    component: () => import("../views/ProfileEdit"),
+    component: () => import("../views/Client/ProfileEdit"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/orders-history",
     name: "OrdersHistory",
-    component: () => import("../views/OrdersHistory"),
+    component: () => import("../views/Client/OrdersHistory"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/favorite",
     name: "Favorite",
-    component: () => import("../views/Favorite"),
+    component: () => import("../views/Client/Favorite"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/cart-items",
     name: "CartItems",
-    component: () => import("../views/CartItems"),
+    component: () => import("../views/Client/CartItems"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/comparing",
     name: "Comparing",
-    component: () => import("../views/Comparing"),
+    component: () => import("../views/Client/Comparing"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/notification",
     name: "Notification",
-    component: () => import("../views/Notification"),
+    component: () => import("../views/Client/Notification"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/notification-settings",
     name: "NotificationSettings",
-    component: () => import("../views/NotificationSettings"),
+    component: () => import("../views/Client/NotificationSettings"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/report",
     name: "Report",
-    component: () => import("../views/Report"),
+    component: () => import("../views/Client/Report"),
     meta: {
-      layout: "main",
+      layout: "client",
     },
   },
   {
     path: "/report-graph",
     name: "ReportGraph",
-    component: () => import("../views/ReportGraph"),
+    component: () => import("../views/Client/ReportGraph"),
     meta: {
-      layout: "main",
+      layout: "client",
+    },
+  },
+  // Admin
+  {
+    path: "/admin-report",
+    name: "AdminReport",
+    component: () => import("../views/Admin/AdminReport"),
+    meta: {
+      layout: "admin",
+    },
+  },
+  {
+    path: "/admin-catalog",
+    name: "AdminCatalog",
+    component: () => import("../views/Admin/AdminCatalog"),
+    meta: {
+      layout: "admin",
+    },
+  },
+  {
+    path: "/create",
+    name: "Create",
+    component: () => import("../views/Admin/Create"),
+    meta: {
+      layout: "admin",
     },
   },
 ];

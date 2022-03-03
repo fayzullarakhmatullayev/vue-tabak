@@ -1,49 +1,16 @@
 <template>
   <div class="relative flex flex-col">
     <div
-      class="dark:bg-black-900 sticky top-14 flex w-full flex-col border-b bg-white py-2"
+      class="dark:bg-black-900 sticky top-16 flex w-full flex-col border-b bg-white py-2"
     >
-      <div class="relative mb-2 flex h-8">
-        <input
-          type="search"
-          placeholder="Поиск"
-          class="border-black-800 dark:bg-black-900 w-full rounded-lg"
-        />
-        <div
-          class="bg-black-800 absolute right-0 top-0 flex h-8 w-16 items-center justify-center rounded-r-lg"
+      <div class="mb-2">
+        <span class="text-lg font-medium bought"
+          >Купленные товары <span>{{ products.length }} товара</span></span
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-5 w-5 stroke-white"
-          >
-            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </div>
       </div>
       <div class="grid grid-cols-2 gap-2">
         <button
           class="bg-black-800 flex items-center justify-center rounded-lg py-1"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 19 15"
-            fill="white"
-            class="mr-2 h-5 w-5"
-          >
-            <path
-              d="M18.3335 0.333374L17.0835 1.58337L16.6668 2.00004L11.6668 7.00004V14.5L7.50017 13.25L7.50016 7.00004L2.91683 2.41671L2.50017 2.00004L0.833496 0.333374H18.3335Z"
-            />
-          </svg>
-          <span class="text-white" @click="isFilterOpen = true">Фильтр</span>
-        </button>
-        <button
-          class="bg-black-800 flex items-center justify-center rounded-lg py-1"
-          @click="showSort = true"
         >
           <span class="text-white">Сортировать</span>
           <svg
@@ -176,76 +143,48 @@
       </div>
     </div>
   </div>
-
-  <teleport to="body">
-    <sort-items :showSort="showSort" @makeFalse="showSort = false" />
-    <filter-items v-if="isFilterOpen" @closeFilter="isFilterOpen = false" />
-  </teleport>
 </template>
 
 <script>
-import SortItems from "@/components/SortItems.vue";
-import FilterItems from "@/components/FilterItems.vue";
 export default {
-  components: { SortItems, FilterItems },
-  name: "Catalog",
+  name: "CartItems",
   data() {
     return {
-      showSort: false,
-      isFilterOpen: false,
       products: [
         {
           id: 1,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
-          blocks: 0,
+          blocks: 2,
           boxes: 0,
         },
         {
           id: 2,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
-          blocks: 0,
+          blocks: 2,
           boxes: 0,
         },
         {
           id: 3,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
-          blocks: 0,
+          blocks: 2,
           boxes: 0,
         },
         {
           id: 4,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
-          blocks: 0,
-          boxes: 0,
-        },
-        {
-          id: 5,
-          name: "Жевательный табак Oden’s 10г",
-          status: "Доступно",
-          image: require("../assets/img/products/1.png"),
-          price: 400,
-          blocks: 0,
-          boxes: 0,
-        },
-        {
-          id: 6,
-          name: "Жевательный табак Oden’s 10г",
-          status: "Доступно",
-          image: require("../assets/img/products/1.png"),
-          price: 400,
-          blocks: 0,
+          blocks: 2,
           boxes: 0,
         },
       ],
@@ -253,3 +192,5 @@ export default {
   },
 };
 </script>
+
+<style></style>

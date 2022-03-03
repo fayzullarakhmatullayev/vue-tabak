@@ -1,30 +1,10 @@
 <template>
   <div class="relative flex flex-col">
     <div
-      class="dark:bg-black-900 sticky top-16 flex w-full flex-col border-b bg-white py-2"
+      class="dark:bg-black-900 sticky top-16 flex w-full flex-col bg-white px-2"
     >
-      <div class="mb-2">
-        <span class="text-lg font-medium"
-          >Избранное ({{ products.length }})</span
-        >
-      </div>
-      <div class="grid grid-cols-2 gap-2">
-        <button
-          class="bg-black-800 flex items-center justify-center rounded-lg py-1"
-        >
-          <span class="text-white">Сортировать</span>
-          <svg
-            class="ml-2 h-3 w-3"
-            width="9"
-            height="12"
-            viewBox="0 0 9 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M4.5 0L8.39711 4.5H0.602886L4.5 0Z" fill="white" />
-            <path d="M4.5 12L0.602886 7.5L8.39711 7.5L4.5 12Z" fill="white" />
-          </svg>
-        </button>
+      <div class="flex border-b pb-4 text-lg font-semibold">
+        Ваш баланс: <span class="ml-1 text-green-500">1523 ₽</span>
       </div>
     </div>
     <div class="mt-16 mb-16">
@@ -141,13 +121,29 @@
           </div>
         </div>
       </div>
+      <div class="border-black-600 mx-2 mt-4 flex flex-col border-b pb-4">
+        <h2 class="mb-2 text-lg font-semibold">Ваша корзина</h2>
+        <div class="flex justify-between text-sm">
+          <div>Товары ({{ products.length }})</div>
+          <span class="font-semibold">2400 ₽</span>
+        </div>
+      </div>
+      <div class="flex h-28 justify-center p-10">
+        <router-link to="/checkout" class="w-3/4">
+          <button
+            class="dark:bg-blueish bg-black-900 h-full w-full rounded text-white"
+          >
+            Оформить заказ
+          </button>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Favorite",
+  name: "CheckoutPreview",
   data() {
     return {
       products: [
@@ -155,7 +151,7 @@ export default {
           id: 1,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 0,
           boxes: 0,
@@ -164,52 +160,13 @@ export default {
           id: 2,
           name: "Жевательный табак Oden’s 10г",
           status: "Доступно",
-          image: require("../assets/img/products/1.png"),
-          price: 400,
-          blocks: 0,
-          boxes: 0,
-        },
-        {
-          id: 3,
-          name: "Жевательный табак Oden’s 10г",
-          status: "Доступно",
-          image: require("../assets/img/products/1.png"),
-          price: 400,
-          blocks: 0,
-          boxes: 0,
-        },
-        {
-          id: 4,
-          name: "Жевательный табак Oden’s 10г",
-          status: "Доступно",
-          image: require("../assets/img/products/1.png"),
-          price: 400,
-          blocks: 0,
-          boxes: 0,
-        },
-        {
-          id: 5,
-          name: "Жевательный табак Oden’s 10г",
-          status: "Доступно",
-          image: require("../assets/img/products/1.png"),
-          price: 400,
-          blocks: 0,
-          boxes: 0,
-        },
-        {
-          id: 6,
-          name: "Жевательный табак Oden’s 10г",
-          status: "Доступно",
-          image: require("../assets/img/products/1.png"),
+          image: require("../../assets/img/products/1.png"),
           price: 400,
           blocks: 0,
           boxes: 0,
         },
       ],
     };
-  },
-  mounted() {
-    this.$store.state.isBackOpen = true;
   },
 };
 </script>
