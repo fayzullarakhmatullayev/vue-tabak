@@ -6,13 +6,14 @@
 import AuthLayout from "@/layouts/AuthLayout.vue";
 import ClientLayout from "@/layouts/ClientLayout.vue";
 import AdminLayout from "@/layouts/AdminLayout.vue";
+import FilterLayout from "@/layouts/FilterLayout.vue";
 export default {
   computed: {
     layout() {
       return (this.$route.meta.layout || "empty") + "-layout";
     },
   },
-  components: { AuthLayout, ClientLayout, AdminLayout },
+  components: { AuthLayout, ClientLayout, AdminLayout, FilterLayout },
   created() {
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (

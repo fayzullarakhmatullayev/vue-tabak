@@ -1,10 +1,10 @@
 <template>
   <div
-    class="menu-admin dark:bg-black-900 fixed bottom-0 w-[calc(100%-1rem)] border-t bg-white"
+    class="admin-menu-admin dark:bg-black-900 fixed bottom-0 w-[calc(100%-1rem)] border-t bg-white"
   >
-    <ul class="menu-list">
+    <ul class="admin-menu-list">
       <li>
-        <router-link to="/admin-report" class="menu-link">
+        <router-link to="/admin-report" class="admin-menu-link">
           <svg
             width="16"
             height="15"
@@ -21,7 +21,7 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/admin-catalog" class="menu-link">
+        <router-link to="/admin-catalog" class="admin-menu-link">
           <svg
             width="15"
             height="15"
@@ -70,7 +70,7 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/create" class="menu-link">
+        <router-link to="/create" class="admin-menu-link">
           <svg
             width="15"
             height="15"
@@ -125,7 +125,7 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/logs" class="menu-link">
+        <router-link to="/logs" class="admin-menu-link">
           <svg
             width="15"
             height="15"
@@ -167,7 +167,7 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/admin-profile" class="menu-link">
+        <router-link to="/admin-profile" class="admin-menu-link">
           <svg
             width="15"
             height="15"

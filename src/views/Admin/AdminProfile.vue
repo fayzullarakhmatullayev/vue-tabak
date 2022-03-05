@@ -72,6 +72,7 @@
               viewBox="0 0 6 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              class="svg-stroke"
             >
               <path
                 d="M5 0.999999L1 6L5 11"

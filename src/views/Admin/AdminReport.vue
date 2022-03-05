@@ -53,21 +53,30 @@
         </button>
       </div>
       <div class="graph-report">
-        <a href="#" class="graph-report__link bg-black-300 dark:bg-black-800">
+        <div
+          @click="isTodayModalOpen = true"
+          class="graph-report__link bg-black-300 dark:bg-black-800"
+        >
           <div class="graph-report__top">Сегодня</div>
           <div class="graph-report__sum">22 000</div>
           <div class="graph-report__date dark:text-black-700">1 декабря</div>
-        </a>
-        <a href="#" class="graph-report__link bg-black-300 dark:bg-black-800">
+        </div>
+        <div
+          @click="isWeeklyModalOpen = true"
+          class="graph-report__link bg-black-300 dark:bg-black-800"
+        >
           <div class="graph-report__top">Неделя</div>
           <div class="graph-report__sum">22 000</div>
           <div class="graph-report__date dark:text-black-700">1-14 декабря</div>
-        </a>
-        <a href="#" class="graph-report__link bg-black-300 dark:bg-black-800">
+        </div>
+        <div
+          @click="isMonthlyModalOpen = true"
+          class="graph-report__link bg-black-300 dark:bg-black-800"
+        >
           <div class="graph-report__top">Месяц</div>
           <div class="graph-report__sum">22 000</div>
           <div class="graph-report__date dark:text-black-700">1-31 декабря</div>
-        </a>
+        </div>
       </div>
       <canvas class="border-b pb-6 border-black-600 mb-5" ref="canvas"></canvas>
       <div class="graph-info">
@@ -98,6 +107,233 @@
       </div>
     </div>
   </div>
+  <teleport to="body">
+    <div class="today-modal">
+      <div
+        class="overlay"
+        v-if="isTodayModalOpen"
+        @click="isTodayModalOpen = false"
+      ></div>
+      <div
+        class="sort card-img bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        :class="{ 'sort-active': isTodayModalOpen }"
+      >
+        <div class="title dark:text-white">Сегодня</div>
+        <div class="subtitle dark:text-black-700">28 декабря 2021г.</div>
+        <div class="check dark:text-white">Средний чек</div>
+        <div class="subtitle dark:text-black-700">0</div>
+        <div class="report-modal">
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Выручка</div>
+            <div class="report-modal__text dark:text-black-700">1111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Прибыль</div>
+            <div class="report-modal__text dark:text-black-700">1111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Продажи</div>
+            <div class="report-modal__text green">1</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Возврат продажи
+            </div>
+            <div class="report-modal__text red">2</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Сумма продажи</div>
+            <div class="report-modal__text green">11111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Сумма возврата
+            </div>
+            <div class="report-modal__text red">111111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Себестоимость продаж
+            </div>
+            <div class="report-modal__text green">1</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Себестоимость возвратов
+            </div>
+            <div class="report-modal__text red">1</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Рентабельность
+            </div>
+            <div class="report-modal__text green">1%</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Маржинальность
+            </div>
+            <div class="report-modal__text red">1%</div>
+          </div>
+        </div>
+        <button
+          class="report-modal__btn dark:bg-blueish text-black-900 border-black-900 rounded border dark:text-white"
+        >
+          Показать график
+        </button>
+      </div>
+    </div>
+    <div class="weekly-modal">
+      <div
+        class="overlay"
+        v-if="isWeeklyModalOpen"
+        @click="isWeeklyModalOpen = false"
+      ></div>
+      <div
+        class="sort card-img bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        :class="{ 'sort-active': isWeeklyModalOpen }"
+      >
+        <div class="title dark:text-white">Неделя</div>
+        <div class="subtitle dark:text-black-700">14-21 декабря 2021г.</div>
+        <div class="check dark:text-white">Средний чек</div>
+        <div class="subtitle dark:text-black-700">0</div>
+        <div class="report-modal">
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Выручка</div>
+            <div class="report-modal__text dark:text-black-700">1111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Прибыль</div>
+            <div class="report-modal__text dark:text-black-700">1111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Продажи</div>
+            <div class="report-modal__text green">1</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Возврат продажи
+            </div>
+            <div class="report-modal__text red">2</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Сумма продажи</div>
+            <div class="report-modal__text green">11111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Сумма возврата
+            </div>
+            <div class="report-modal__text red">111111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Себестоимость продаж
+            </div>
+            <div class="report-modal__text green">1</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Себестоимость возвратов
+            </div>
+            <div class="report-modal__text red">1</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Рентабельность
+            </div>
+            <div class="report-modal__text green">1%</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Маржинальность
+            </div>
+            <div class="report-modal__text red">1%</div>
+          </div>
+        </div>
+        <button
+          class="report-modal__btn dark:bg-blueish text-black-900 border-black-900 rounded border dark:text-white"
+        >
+          Показать график
+        </button>
+      </div>
+    </div>
+    <div class="monthly-modal">
+      <div
+        class="overlay"
+        v-if="isMonthlyModalOpen"
+        @click="isMonthlyModalOpen = false"
+      ></div>
+      <div
+        class="sort card-img bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
+        :class="{ 'sort-active': isMonthlyModalOpen }"
+      >
+        <div class="title dark:text-white">Месяц</div>
+        <div class="subtitle dark:text-black-700">1-31 декабря 2021г.</div>
+        <div class="check dark:text-white">Средний чек</div>
+        <div class="subtitle dark:text-black-700">0</div>
+        <div class="report-modal">
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Выручка</div>
+            <div class="report-modal__text dark:text-black-700">1111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Прибыль</div>
+            <div class="report-modal__text dark:text-black-700">1111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Продажи</div>
+            <div class="report-modal__text green">1</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Возврат продажи
+            </div>
+            <div class="report-modal__text red">2</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">Сумма продажи</div>
+            <div class="report-modal__text green">11111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Сумма возврата
+            </div>
+            <div class="report-modal__text red">111111</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Себестоимость продаж
+            </div>
+            <div class="report-modal__text green">1</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Себестоимость возвратов
+            </div>
+            <div class="report-modal__text red">1</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Рентабельность
+            </div>
+            <div class="report-modal__text green">1%</div>
+          </div>
+          <div class="report-modal__items">
+            <div class="report-modal__title dark:text-white">
+              Маржинальность
+            </div>
+            <div class="report-modal__text red">1%</div>
+          </div>
+        </div>
+        <button
+          class="report-modal__btn dark:bg-blueish text-black-900 border-black-900 rounded border dark:text-white"
+        >
+          Показать график
+        </button>
+      </div>
+    </div>
+  </teleport>
 </template>
 
 <script>
@@ -107,6 +343,9 @@ export default {
   data() {
     return {
       gradient: null,
+      isTodayModalOpen: false,
+      isWeeklyModalOpen: false,
+      isMonthlyModalOpen: false,
     };
   },
   methods: {},

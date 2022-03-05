@@ -1,8 +1,11 @@
 <template>
   <div class="logs admin-catalog">
     <div class="catalog-top fixed dark:bg-black-900 bg-white">
-      <div class="catalog-top__title logs-title" @click="isTopMenuOpen = true">
-        Движение денег
+      <div
+        class="catalog-top__title logs-title"
+        @click="isTopMenuOpen = !isTopMenuOpen"
+      >
+        Движение товара
         <svg
           width="12"
           height="6"
@@ -59,15 +62,16 @@
       <div class="logs-wrapper">
         <div class="logs-item">
           <div class="logs-item__title dark:text-black-700">13 декабря</div>
-          <div class="logs-card green">
-            <div class="logs-card__top">
-              <div class="logs-card__title">Приход №1</div>
+          <div class="logs-card red">
+            <div class="logs-card__top top">
+              <div class="logs-card__title">
+                Возврат продажи №1 <span class="orange">Оформлен</span>
+              </div>
               <div class="logs-card__price">800₽</div>
             </div>
-            <div class="logs-card__text dark:text-black-700">
-              Продажа товара , клиенту “Дымок”
+            <div class="logs-card__text logs-card__footer dark:text-black-700">
+              “Дымок” > Склад мой
             </div>
-            <div class="logs-card__link">Склад мой</div>
             <div class="logs-burger" @click="isLogsMenuOpen = true">
               <span></span><span></span><span></span>
             </div>
@@ -75,30 +79,53 @@
         </div>
         <div class="logs-item">
           <div class="logs-item__title dark:text-black-700">13 декабря</div>
-          <div class="logs-card red">
-            <div class="logs-card__top">
-              <div class="logs-card__title">Расход №2</div>
+          <div class="logs-card green">
+            <div class="logs-card__top top">
+              <div class="logs-card__title">
+                Продажа №1 <span class="blue">Подтвержден</span>
+              </div>
               <div class="logs-card__price">800₽</div>
             </div>
-            <div class="logs-card__text dark:text-black-700">
-              Продажа товара , клиенту “Дымок”
+            <div class="logs-card__text dark:text-black-700 logs-card__footer">
+              Склад мой > “Дымок”
+              <p>Долг 400₽</p>
             </div>
-            <div class="logs-card__link">Склад мой</div>
             <div class="logs-burger" @click="isLogsMenuOpen = true">
               <span></span><span></span><span></span>
             </div>
           </div>
         </div>
         <div class="logs-item">
+          <div class="logs-item__title dark:text-black-700">13 декабря</div>
           <div class="logs-card green">
-            <div class="logs-card__top">
-              <div class="logs-card__title">Приход №1</div>
+            <div class="logs-card__top top">
+              <div class="logs-card__title">
+                Продажа №1 <span class="log-green">Отгружен</span>
+              </div>
               <div class="logs-card__price">800₽</div>
             </div>
-            <div class="logs-card__text dark:text-black-700">
-              Продажа товара , клиенту “Дымок”
+            <div class="logs-card__text dark:text-black-700 logs-card__footer">
+              Склад мой > “Дымок”
+              <p>Долг 400₽</p>
             </div>
-            <div class="logs-card__link">Склад мой</div>
+            <div class="logs-burger" @click="isLogsMenuOpen = true">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <div class="logs-item">
+          <div class="logs-item__title dark:text-black-700">13 декабря</div>
+          <div class="logs-card green">
+            <div class="logs-card__top top">
+              <div class="logs-card__title">
+                Продажа №1 <span class="log-red">Отменен</span>
+              </div>
+              <div class="logs-card__price">800₽</div>
+            </div>
+            <div class="logs-card__text dark:text-black-700 logs-card__footer">
+              Склад мой > “Дымок”
+              <p>Долг 400₽</p>
+            </div>
             <div class="logs-burger" @click="isLogsMenuOpen = true">
               <span></span><span></span><span></span>
             </div>
