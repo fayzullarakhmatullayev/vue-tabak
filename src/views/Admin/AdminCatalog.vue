@@ -3,7 +3,10 @@
     <div class="catalog-top fixed dark:bg-black-900 bg-white">
       <div class="catalog-top__title">Товар и услуги</div>
       <div class="catalog-filter">
-        <div class="catalog-filter__btn bg-black-300 dark:bg-black-800">
+        <div
+          class="catalog-filter__btn bg-black-300 dark:bg-black-800"
+          @click="isFilterOpen = true"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 19 15"
@@ -61,7 +64,7 @@
             </div>
           </div>
         </div>
-        <div class="card-burger">
+        <div class="card-burger" @click="isMenuOpen = true">
           <span></span>
           <span></span>
           <span></span>
@@ -69,6 +72,81 @@
       </div>
     </div>
   </div>
+  <teleport to="body">
+    <div class="logs-modal">
+      <div class="overlay" v-if="isMenuOpen" @click="isMenuOpen = false"></div>
+      <div
+        class="sort card-img bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-200"
+        :class="{ 'sort-active': isMenuOpen }"
+      >
+        <div class="logs-menu">
+          <a href="#" class="logs-menu__link">Редактировать</a
+          ><a href="#" class="logs-menu__link">Создать входящий платеж</a>
+          <a href="#" class="logs-menu__link">Создать отгрузк</a>
+          <a href="#" class="logs-menu__link">Сделать возврат</a>
+          <a href="#" class="logs-menu__link">Отложить</a>
+          <a href="#" class="logs-menu__link red">Удалить</a
+          ><a href="#" class="logs-menu__link">Отменить</a>
+        </div>
+      </div>
+    </div>
+    <div class="filter-modal">
+      <div
+        class="overlay"
+        v-if="isFilterOpen"
+        @click="isFilterOpen = false"
+      ></div>
+      <div
+        class="sort card-img bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-200"
+        :class="{ 'sort-active': isFilterOpen }"
+      >
+        <div class="menu-filter">
+          <div class="menu-filter__title">
+            Жевательный табак Oden’s Cloud Dry 16g
+          </div>
+          <div class="menu-filter__add">
+            <button
+              class="dark:bg-blueish text-black-900 border-black-900 rounded border dark:text-white menu-filter__btn"
+            >
+              Блок
+            </button>
+            <button
+              class="bg-black-300 dark:bg-black-900 dark:border-black-700 dark:text-black-700 rounded border border-white menu-filter__btn"
+            >
+              Коробка
+            </button>
+            <div class="flex menu-filter__wrap">
+              <button
+                class="dark:bg-black-700 bg-black-900 rounded"
+                @click="counter--"
+              >
+                -</button
+              ><span class="text-black-900 dark:text-white menu-filter__som">{{
+                counter
+              }}</span
+              ><button
+                class="dark:bg-black-700 bg-black-900 rounded"
+                @click="counter++"
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <div class="menu-filter__sub">Цена</div>
+          <select
+            class="menu-filter__select border border-black-700 text-black-700 rounded dark:bg-black-800 w-full"
+          >
+            <option disabled selected>Своя стоимость</option>
+            <option>Цена для ООО”Дымок”</option>
+            <option>Цена для ООО”Дымок”</option>
+            <option>Цена для ООО”Дымок”</option>
+            <option>Цена для ООО”Дымок”</option>
+          </select>
+          <button class="menu-filter__submit">Применить</button>
+        </div>
+      </div>
+    </div>
+  </teleport>
 </template>
 
 <script>
@@ -185,6 +263,9 @@ export default {
           left: 51,
         },
       ],
+      isMenuOpen: false,
+      isFilterOpen: false,
+      counter: 0,
     };
   },
 };

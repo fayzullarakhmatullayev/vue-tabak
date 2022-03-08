@@ -54,6 +54,7 @@
 <script>
 export default {
   props: ["ready", "filter"],
+  emits: ["filterClicked"],
 };
 </script>
 
