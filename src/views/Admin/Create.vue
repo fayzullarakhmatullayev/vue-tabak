@@ -4,8 +4,8 @@
       <div class="create-title">Документы</div>
       <div class="create-wrapper">
         <div class="create-item">
-          <a
-            href="#"
+          <router-link
+            to="/sales"
             class="create-link bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
           >
             <svg
@@ -23,7 +23,7 @@
                 fill="white"
               />
             </svg>
-          </a>
+          </router-link>
           <p>Продажа</p>
         </div>
         <div class="create-item">

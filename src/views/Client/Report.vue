@@ -31,7 +31,6 @@
         class="report-card border-b"
         v-for="product in products"
         :key="product.id"
-        @click="$router.push('/report-graph')"
       >
         <img :src="product.image" alt="products" class="report-img" />
         <div class="report-content">

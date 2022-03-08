@@ -220,6 +220,22 @@ const routes = [
       layout: "filter",
     },
   },
+  {
+    path: "/sales",
+    name: "Sales",
+    component: () => import("@/views/Admin/Sales"),
+    meta: {
+      layout: "filter",
+    },
+  },
+  {
+    path: "/history-document",
+    name: "HistoryDocument",
+    component: () => import("@/views/Admin/HistoryDocument"),
+    meta: {
+      layout: "filter",
+    },
+  },
 ];
 
 const router = createRouter({
