@@ -27,8 +27,8 @@
           <p>Продажа</p>
         </div>
         <div class="create-item">
-          <a
-            href="#"
+          <router-link
+            to="/purchase"
             class="create-link bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
           >
             <svg
@@ -46,7 +46,7 @@
                 fill="white"
               />
             </svg>
-          </a>
+          </router-link>
           <p>Закупка</p>
         </div>
         <div class="create-item">
@@ -215,8 +215,8 @@
           <p>Возврат закупки</p>
         </div>
         <div class="create-item">
-          <a
-            href="#"
+          <router-link
+            to="/tech-card"
             class="create-link bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
           >
             <svg
@@ -234,12 +234,12 @@
                 fill="white"
               />
             </svg>
-          </a>
+          </router-link>
           <p>Тех.карта</p>
         </div>
         <div class="create-item">
-          <a
-            href="#"
+          <router-link
+            to="/tech-operation"
             class="create-link bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
           >
             <svg
@@ -257,7 +257,7 @@
                 fill="white"
               />
             </svg>
-          </a>
+          </router-link>
           <p>Тех.операция</p>
         </div>
       </div>

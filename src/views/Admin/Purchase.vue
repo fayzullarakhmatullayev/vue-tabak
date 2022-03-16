@@ -1,6 +1,6 @@
 <template>
   <div class="sales">
-    <filter-top :ready="true">Продажа</filter-top>
+    <filter-top :ready="true">Закупка</filter-top>
     <div class="sales-tab pt-20">
       <button
         class="dark:bg-black-800 text-black-900 border-black-900 rounded border dark:text-white"
@@ -12,19 +12,19 @@
         {{ btn.title }}
       </button>
     </div>
-    <sales-order v-if="tabBtns[0].isActive" />
-    <sales-payment v-else-if="tabBtns[1].isActive" />
-    <sales-load v-else-if="tabBtns[2].isActive" />
+    <purchase-order v-if="tabBtns[0].isActive" />
+    <purchase-payment v-else-if="tabBtns[1].isActive" />
+    <purchase-load v-else-if="tabBtns[2].isActive" />
   </div>
 </template>
 
 <script>
 import FilterTop from "@/components/Admin/FilterTop.vue";
-import SalesOrder from "@/components/Admin/SalesOrder.vue";
-import SalesPayment from "@/components/Admin/SalesPayment.vue";
-import SalesLoad from "@/components/Admin/SalesLoad.vue";
+import PurchaseOrder from "@/components/Admin/PurchaseOrder.vue";
+import PurchasePayment from "@/components/Admin/PurchasePayment.vue";
+import PurchaseLoad from "@/components/Admin/PurchaseLoad.vue";
 export default {
-  components: { FilterTop, SalesOrder, SalesPayment, SalesLoad },
+  components: { FilterTop, PurchaseOrder, PurchasePayment, PurchaseLoad },
   data() {
     return {
       tabBtns: [
@@ -40,7 +40,7 @@ export default {
         },
         {
           id: 2,
-          title: "Отгрузка",
+          title: "Приёмка",
           isActive: false,
         },
       ],

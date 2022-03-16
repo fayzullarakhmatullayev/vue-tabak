@@ -1,7 +1,7 @@
 <template>
   <div class="sales">
     <filter-top :ready="true">История изменений</filter-top>
-    <div class="sales-history">
+    <div class="sales-history pt-20">
       <div class="sales-history__title">Изменено по ООО “Дымок”</div>
       <div class="sales-history__subtitle">
         (Администратор 01.01.2022 13:45)

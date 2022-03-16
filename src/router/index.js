@@ -236,6 +236,30 @@ const routes = [
       layout: "filter",
     },
   },
+  {
+    path: "/purchase",
+    name: "purchase",
+    component: () => import("@/views/Admin/Purchase"),
+    meta: {
+      layout: "filter",
+    },
+  },
+  {
+    path: "/tech-card",
+    name: "tech-card",
+    component: () => import("@/views/Admin/TechCard"),
+    meta: {
+      layout: "filter",
+    },
+  },
+  {
+    path: "/tech-operation",
+    name: "tech-operation",
+    component: () => import("@/views/Admin/TechOperation"),
+    meta: {
+      layout: "filter",
+    },
+  },
 ];
 
 const router = createRouter({

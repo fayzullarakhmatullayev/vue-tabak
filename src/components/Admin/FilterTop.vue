@@ -1,5 +1,7 @@
 <template>
-  <div class="logs-filter__top admin-catalog border-b mb-3">
+  <div
+    class="logs-filter__top admin-catalog border-b mb-3 fixed bg-black-300 dark:bg-black-900"
+  >
     <div class="subtext" @click="$router.go(-1)">
       <svg
         width="6"
