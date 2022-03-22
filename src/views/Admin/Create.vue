@@ -80,8 +80,8 @@
           <p>Инвентаризация</p>
         </div>
         <div class="create-item">
-          <a
-            href="#"
+          <router-link
+            to="/inventory"
             class="create-link bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
           >
             <svg
@@ -118,12 +118,12 @@
                 class="plus"
               />
             </svg>
-          </a>
+          </router-link>
           <p>Оприходование</p>
         </div>
         <div class="create-item">
-          <a
-            href="#"
+          <router-link
+            to="/writeoff"
             class="create-link bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
           >
             <svg
@@ -151,7 +151,7 @@
                 class="minus"
               />
             </svg>
-          </a>
+          </router-link>
           <p>Списание</p>
         </div>
         <div class="create-item">
