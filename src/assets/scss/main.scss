@@ -1858,3 +1858,20 @@ textarea::placeholder {
     }
   }
 }
+
+.clients-card {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 11px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  &__info {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
