@@ -155,8 +155,8 @@
           <p>Списание</p>
         </div>
         <div class="create-item">
-          <a
-            href="#"
+          <router-link
+            to="/returns-sales"
             class="create-link bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
           >
             <svg
@@ -181,12 +181,12 @@
                 class="user-back"
               />
             </svg>
-          </a>
+          </router-link>
           <p>Возврат продажи</p>
         </div>
         <div class="create-item">
-          <a
-            href="#"
+          <router-link
+            to="/returns-purchase"
             class="create-link bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
           >
             <svg
@@ -211,7 +211,7 @@
                 class="back-purchase"
               />
             </svg>
-          </a>
+          </router-link>
           <p>Возврат закупки</p>
         </div>
         <div class="create-item">
@@ -526,5 +526,3 @@
 <script>
 export default {};
 </script>
-
-<style></style>

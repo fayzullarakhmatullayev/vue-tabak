@@ -284,6 +284,22 @@ const routes = [
       layout: "filter",
     },
   },
+  {
+    path: "/returns-sales",
+    name: "returns-sales",
+    component: () => import("@/views/Admin/ReturnsSales"),
+    meta: {
+      layout: "filter",
+    },
+  },
+  {
+    path: "/returns-purchase",
+    name: "returns-purchase",
+    component: () => import("@/views/Admin/ReturnsPurchase"),
+    meta: {
+      layout: "filter",
+    },
+  },
 ];
 
 const router = createRouter({
