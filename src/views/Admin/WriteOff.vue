@@ -10,7 +10,7 @@
           ></span
         ></label>
       </div>
-      <div class="sales-content__search">
+      <div class="sales-content__search mb-2">
         <div class="relative flex h-8">
           <input
             type="search"
