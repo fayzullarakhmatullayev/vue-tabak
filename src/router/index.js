@@ -260,6 +260,30 @@ const routes = [
       layout: "filter",
     },
   },
+  {
+    path: "/inventirization",
+    name: "inventirization",
+    component: () => import("@/views/Admin/Inventirization"),
+    meta: {
+      layout: "filter",
+    },
+  },
+  {
+    path: "/inventory",
+    name: "inventory",
+    component: () => import("@/views/Admin/Inventory"),
+    meta: {
+      layout: "filter",
+    },
+  },
+  {
+    path: "/writeoff",
+    name: "writeoff",
+    component: () => import("@/views/Admin/WriteOff"),
+    meta: {
+      layout: "filter",
+    },
+  },
 ];
 
 const router = createRouter({

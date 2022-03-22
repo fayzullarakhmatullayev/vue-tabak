@@ -1337,7 +1337,12 @@ textarea::placeholder {
     justify-content: space-between;
     align-items: center;
     padding: 23px 0;
-    width: 96.5%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 50;
     .subtext {
       display: flex;
       align-items: center;

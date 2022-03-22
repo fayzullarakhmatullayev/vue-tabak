@@ -50,8 +50,8 @@
           <p>Закупка</p>
         </div>
         <div class="create-item">
-          <a
-            href="#"
+          <router-link
+            to="/inventirization"
             class="create-link bg-black-300 dark:bg-black-800 dark:border-black-700 dark:text-black-700"
           >
             <svg
@@ -76,7 +76,7 @@
                 class="lupa"
               />
             </svg>
-          </a>
+          </router-link>
           <p>Инвентаризация</p>
         </div>
         <div class="create-item">
